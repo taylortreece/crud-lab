@@ -14,10 +14,10 @@ class RestaurantInput extends Component {
 
   handleOnSubmit = (event) => {
     event.preventDefault();
-    let restaurant = {
-      text: this.state.text
-    }
-    this.props.addRestaurant(restaurant)
+    // let restaurant = {
+    //   text: this.state.text
+    // }
+    this.props.addRestaurant(this.state.text)
     this.setState({text: ''})
   }
 
@@ -29,6 +29,7 @@ class RestaurantInput extends Component {
             onChange={this.handleOnChange} 
             type='text' 
             name='text'
+            id='text'
             value={this.state.text}
             placeholder='input restaurant name...'
           />

@@ -7,8 +7,9 @@ export const manageRestaurants = (state = [], action) => {
         case "ADD_RESTAURANT":
             restaurant = {
                 id: cuid(),
-                text: action.payload.text
+                text: action.text
             }
+            console.log(action)
         return state.concat(restaurant)
 
         case "REMOVE_RESTAURANT":
